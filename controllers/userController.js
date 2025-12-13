@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 
 
 /*Dated 6 december 2025
-** @register new user module
+** @register new user module done by saroj
 */
 exports.register = (req, res) => {
     const { name, email,mobile, password } = req.body;
