@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300&display=swap");
+$font-family-sans-serif: "Lato", sans-serif;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New", monospace !default;
+
+$font-family-base: $font-family-sans-serif !default;
+$base-size: 16;
+//Function to convert px value into rem
+//You can replace rem with any other value you want (rem is most preferred value for web)
+@function size($target, $context: $base-size) {
+  @return ($target / $context) * 1rem;
+}
+$base-font-size: size($base-size);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1280px,
+  xxl: 1600px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 1002px,
+  xl: 1152px,
+  xxl: 1520px,
+);
+$grid-gutter-width: size(32);
+
+@import "scss/bootstrap.scss";
+@import "partial/custom-variable";
+@import "partial/header";
+@import "partial/footer";
+@import "partial/components";
+@import "partial/common";
+// overwrite variable
+
+html {
+  font-size: $base-size + px;
+}
+body {
+  background-color: $white;
+  font-family: "Lato", sans-serif;
+  color: $color-black1;
+}
+
+// .container {
+//   background: yellow;
+// }
